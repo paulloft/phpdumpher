@@ -185,7 +185,7 @@ class Dumphper
                     if ($class->name == $declaredClass)
                     {
                         echo '<tr><td class="dumphper-key-object">';
-                        self::drawValue($value->name/* . ' <span class="dumphper-class-def">' . $declaredClass . '</span>'*/, join('-',Reflection::getModifierNames($value->getModifiers())));
+                        self::drawValue($value->name/* . ' <span class="dumphper-class-def">' . $declaredClass . '</span>'*/, join('-',\Reflection::getModifierNames($value->getModifiers())));
                         echo '</td><td>';
                         if ($value->isPublic()) {
                             $tmp = $value->getValue($source);
