@@ -27,7 +27,7 @@ class Dumphper
     static function dump(&$source)
     {
         if (class_exists('SplObjectStorage')) {
-            self::$objectStorage = new SplObjectStorage();
+            self::$objectStorage = new \SplObjectStorage();
         }
         self::$depth = 0;
         self::drawStyles();
@@ -150,7 +150,7 @@ class Dumphper
         }
         else
         {
-            $sClass = new ReflectionObject($source);
+            $sClass = new \ReflectionObject($source);
             $statics = null;
             $class = $sClass->getParentClass();
             $classArray = '';
