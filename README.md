@@ -3,14 +3,14 @@ DumPHPer is an advanced PHP variable dumper, that shows detailed info in a simpl
 
 ### Usages
 ```php
-\Dumphper\Dumphper::dump($data);
+\Utils\Dumphper::dump($data);
 ```
 ### Extended functionality
 ```php
 function d() {
     $args = func_get_args();
     foreach ($args as $a) {
-        \Dumphper\Dumphper::dump($a);
+        \Utils\Dumphper::dump($a);
     }
     exit();
 }
@@ -19,7 +19,7 @@ function d() {
 Installation
 ------------
 
-*Requres PHP 5.3 or higher*
+*Requres PHP 7.3 or higher*
 
 PHPdumphper is [PSR-4](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md) compliant and can be installed using [composer](//getcomposer.org). Just add `paulloft/dumphper` to your composer.json.
 
@@ -27,6 +27,12 @@ PHPdumphper is [PSR-4](https://github.com/php-fig/fig-standards/blob/master/acce
 "require": {
     "paulloft/dumphper": "*"
 }
+```
+
+or run in shell
+
+```shell
+composer require paulloft/dumphper
 ```
 
 ### Example of output
